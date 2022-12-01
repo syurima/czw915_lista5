@@ -15,4 +15,28 @@ abstract public class PracownikUczelni extends Osoba{
         this.staz = staz;
         this.pensja = pensja;
     }
+
+    public String getStanowisko() {
+        return stanowisko;
+    }
+    public void setStanowisko(String stanowisko) {
+        this.stanowisko = stanowisko;
+    }
+    public int getStaz() {
+        return staz;
+    }
+    public void setStaz(int staz) {
+        this.staz = staz;
+    }
+    public int getPensja() {
+        return pensja;
+    }
+    public void setPensja(int pensja) {
+        this.pensja = pensja;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() +  stanowisko  + ", staz: " + staz + ", pensja: " + pensja;
+    }
 }

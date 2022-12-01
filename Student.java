@@ -10,14 +10,13 @@ public class Student extends Osoba{
     private boolean stacjonarny;
 
     public Student() {
-        this.nrIndeksu = nrIndeksu;
-        this.rokStudiow = rokStudiow;
+        this.nrIndeksu = 0;
+        this.rokStudiow = 0;
         this.kursy = new ArrayList<Kurs>();
         this.erasmus = false;
         this.stopien1 = true;
         this.stacjonarny = true;
     }
-
     public Student(String imie, String nazwisko, String pesel, int wiek, char plec, int nrIndeksu, int rokStudiow, List<Kurs> kursy, boolean erasmus, boolean stopien1, boolean stacjonarny) {
         super(imie, nazwisko, pesel, wiek, plec);
         this.nrIndeksu = nrIndeksu;
@@ -48,7 +47,9 @@ public class Student extends Osoba{
     public void setKursy(List<Kurs> kursy) {
         this.kursy = kursy;
     }
-
+    public void addKurs(Kurs k) {
+        this.kursy.add(k);
+    }
     public boolean isErasmus() {
         return erasmus;
     }
@@ -68,5 +69,9 @@ public class Student extends Osoba{
     }
     public void setStacjonarny(boolean stacjonarny) {
         this.stacjonarny = stacjonarny;
+    }
+
+    public String toString() {
+        return ("student | " + super.toString() + "Indeks: " + nrIndeksu + ", " + rokStudiow + " rok studiów");
     }
 }

@@ -11,4 +11,15 @@ public class PracownikAdmin extends PracownikUczelni{
         super(imie, nazwisko, pesel, wiek, plec, stanowisko, staz, pensja);
         this.nadgodziny = nadgodziny;
     }
+
+    public int getNadgodziny() {
+        return nadgodziny;
+    }
+    public void setNadgodziny(int nadgodziny) {
+        this.nadgodziny = nadgodziny;
+    }
+
+    public String toString() {
+        return ("pracownik administracyjny | " + super.toString());
+    }
 }
